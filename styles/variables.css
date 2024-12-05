@@ -1,1 +1,51 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+@media (width <= 375px)  {
+
+    .header {
+    height: 327px; 
+    }
+
+    .header__title {
+        line-height: 49px;
+    }
+
+    .header__subtitle {
+        line-height: 14px;
+    }
+
+    .text-button {
+        width: 321px;
+    }
+  
+    .card__title {
+        padding-top: 4px;
+        padding-bottom: 5px;
+        line-height: 21.78px;
+    }
+
+    .card-text-cont {
+        padding-top: 28px;
+    }
+  
+    .card__label {
+        right: 17px;
+    }
+
+    .save {
+        flex-direction: column;
+        row-gap: 8px;
+        inline-size: 306px;
+        block-size: 84px;
+    }
+
+    .floppy-save{
+        width: 28px;
+        height: 28px;
+    }
+
+    .dialog {
+        grid-template-columns: 39px 198px;
+        width: 341px;
+    }
+
+  }
