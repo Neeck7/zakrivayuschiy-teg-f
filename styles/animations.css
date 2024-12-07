@@ -14,34 +14,48 @@
   }
   
   .core {
-    transition: fill 0.3s 0s linear;
+    transition: fill 0.3s 0.03s linear;
   }
   
   .main-body {
-    transition: fill 0.3s 0.05s linear;
+    transition: fill 0.3s 0s linear;
   }
 
   .like-icon {
     height: 39px;
   }
   
-  .like-icon:hover .core, .like-icon:hover .main-body {
-      fill: black;
-  }
 
-  .like-icon:active .core, .like-icon:active .main-body{
+  .like-icon:hover .core {
+    fill: black;
+    transition: fill 0.3s 0s linear;
+  }
+  
+  .like-icon:hover .main-body {
+    fill: black;
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+
+  .like-icon:active .core {
     fill: red;
+    transition: fill 0.3s 0s linear;
+  }
+  
+  .like-icon:active .main-body {
+    fill: red;
+    transition: fill 0.3s 0.05s linear;
   }
 
   .card__icon-button:focus-visible {
-    transition: border  0.3s ease;
+    transition: border  0.3s 0s ease;
     border: 2px solid black;
     outline: none;
   }
 
-  .main-body:hover {
+  /* .main-body:hover {
     fill: red;
-  }
+  } */
 
   .like-icon.is-liked .core {
     transition: fill 0.3s linear;

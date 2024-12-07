@@ -114,6 +114,15 @@
   mix-blend-mode: hard-light;
   opacity: 0.5;
   text-shadow: 0 0 2px white;
+  
+}
+
+@supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
+  .card-label {
+      text-shadow: none;
+      -webkit-text-stroke: 1px white;
+      text-stroke: 1px white;
+  }
 }
 
 .card__image {
@@ -211,7 +220,7 @@
  height: 38px;
 }
 
-.Like-Save {
+.button {
   background-color: white;
   cursor: pointer;
   border: 2px solid black;
@@ -223,12 +232,12 @@
   position: relative;
 }
 
-.Like-Save:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px black;
   outline: none;
 }
 
-.Like-Save::before {
+.button::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -237,7 +246,7 @@
   translate: -100%;
 }
 
-.Like-Save:hover::before {
+.button:hover::before {
   translate: 0%;
 }
 
@@ -258,15 +267,8 @@
   margin-bottom: 100px;
   display: flex;
   align-self: center;
-  justify-content: center;
-  align-items: center;
   column-gap: 8px;
-  border: 2px solid black;
-  background-color: white;
-  position: relative;
   z-index: 2;
-  cursor: pointer;
-  overflow: hidden;
   margin-top: 50px;
 }
 
@@ -291,10 +293,8 @@
 }
 
 .dialog {
-  /* width: 353px;
-  height: 191px; */
   inline-size: 353px;
-  block-size: 191px;
+  
   border: none;
   outline: 2px solid black;
   display: grid;
@@ -306,6 +306,8 @@
   align-content: center;
   row-gap: 30px;
   z-index: 5;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 dialog:not([open]) {
@@ -333,11 +335,6 @@ dialog:not([open]) {
   block-size: 38px;
   display: grid;
   grid-column: 1/3;
-  cursor: pointer;
-  align-items: center;
-  background-color: white;
-  border: 2px solid black;
-
 }
 
 dialog::backdrop {
